@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  margin: 0 0 200px;
+  padding-top: 30px;
+  font-family: Arial;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (width <= 1000px) {
+  body {
+    overflow: auto;
+  }
+}
+
+.people {
+  grid-template-columns: repeat(4, 231px);
+  gap: 40px 30px;
+  display: grid;
+}
+
+@media (width <= 1000px) {
+  .people {
+    grid-template-columns: repeat(2, 231px);
+  }
+}
+
+.person {
+  text-align: center;
+  transition: transform 1s;
+  position: relative;
+}
+
+.person:hover {
+  background-color: #eee;
+  border-radius: 12px;
+  transition: transform 1s, border-radius 1s;
+  transform: scale(1.2);
+}
+
+.person:hover .extra {
+  opacity: 1;
+}
+
+.person:hover .photo img {
+  border-radius: 60px;
+  transition: border-radius 1s;
+}
+
+.photo img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  transition: border-radius 1s;
+}
+
+.photo__rank {
+  text-align: center;
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18.4px;
+  display: flex;
+  position: absolute;
+  top: 83px;
+  right: 25px;
+}
+
+.details__name {
+  color: #2f4f4f;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.extra {
+  color: #000;
+  opacity: 0;
+  font-weight: normal;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
